@@ -11,6 +11,7 @@ body {
 }
 
 header {
+    font-family: 'Roboto Mono', monospace;
     background: rgb(34,34,34);
     background: radial-gradient(circle, rgb(22, 22, 22) 59%, rgba(0,0,0,1) 100%);
     color: #fff;
@@ -19,7 +20,13 @@ header {
     border-radius: 40px;
     font-size:20px;
 }
-
+h1
+{
+    font-family: 'Roboto Mono', monospace;
+}
+h2{
+    font-family: 'Roboto Mono', monospace;
+}
 header nav ul {
     display: flex;
     justify-content: center;
@@ -199,12 +206,12 @@ img
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: Verdana;
-    display: flex;
+    display:flex;
     min-height: 20%;
 
     
 }
+
 
 section h2{
     font-size:25px;
