@@ -12,8 +12,8 @@ body {
 
 header {
     font-family: 'Roboto Mono', monospace;
-    background: rgb(34,34,34);
-    background: radial-gradient(circle, rgb(22, 22, 22) 59%, rgba(0,0,0,1) 100%);
+    background: rgb(132,44,182);
+    background: radial-gradient(circle, rgba(132,44,182,1) 55%, rgba(16,83,157,1) 100%);
     color: #fff;
     padding: 2%;
     text-align: center;
@@ -37,13 +37,11 @@ header nav ul li {
     margin: 0 10px;
 }
 
-header nav ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
+
 header nav div a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    font-size:175%;
 }
 header nav div {
     list-style: none;
@@ -219,11 +217,11 @@ section h2{
 }
 
 header h1{
-    color:rgb(255, 255, 255);
-    font-size:70px;
-    text-shadow: 2px 1px rgb(207, 207, 207);
+    color:rgb(0, 0, 0);
+    font-size:500%;
+    text-shadow: 2px 2px rgb(45, 22, 175);
     margin-top:2%;
-
+    filter: blur(1px);
 
 }
 .backtop{
@@ -238,7 +236,6 @@ header h1{
 {
     color:rgb(122, 122, 122);
 }
-
 
 
 
