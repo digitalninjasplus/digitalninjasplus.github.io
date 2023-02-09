@@ -219,7 +219,7 @@ section h2{
 header h1{
     color:rgb(0, 0, 0);
     font-size:500%;
-    text-shadow: 2px 2px rgb(45, 22, 175);
+    text-shadow: 2px 2px black;
     margin-top:2%;
     filter: blur(1px);
 
