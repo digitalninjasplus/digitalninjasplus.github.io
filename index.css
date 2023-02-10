@@ -14,7 +14,7 @@ header {
     font-family: 'Roboto Mono', monospace;
 background: rgb(0,0,0);
 background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(3,3,40,1) 47%, rgba(9,9,121,1) 73%, rgba(0,212,255,1) 100%);
-    color: #fff;
+    color: white;
     padding: 2%;
     text-align: center;
     border-radius: 40px;
@@ -217,7 +217,7 @@ section h2{
 }
 
 header h1{
-    color:rgb(0, 0, 0);
+    color:white;
     font-size:500%;
     text-shadow: 2px 2px rgb(0, 0, 0);
     margin-top:2%;
