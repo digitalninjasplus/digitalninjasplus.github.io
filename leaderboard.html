@@ -8,18 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="index.css">
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: black;
+  overflow-x: hidden; /* Hide scrollbars */
 }
 
 h1 {
   text-align: center;
   margin-top: 50px;
   font-size: 36px;
+  color:white;
 }
 
 table {
@@ -53,17 +58,26 @@ td:nth-child(3) {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+tr:nth-child(odd) {
+  background-color: #b8b8b8;
+}
 p{
     font-size:30px;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    color:white;
+
 }
+
+ 
 
 
 </style>
   </head>
   <body>
+    <div id="progressbar" style="height: 0%;"></div>
+    <div id="scrollpath"></div>
     <h1>Leaderboard</h1>
     <table>
       <thead>
@@ -84,7 +98,7 @@ p{
     <br>
     
     <h1>About the Leaderboard</h1>
-    <p style="color:rgb(0, 0, 0);">Welcome to the Digital Ninjas leaderboard! Here, you can see the top contributors who have earned the most points by supporting our community. Points are awarded for various actions, such as sharing our website, helping to code new features, suggesting ideas for improvement, and more.
+    <p style="color:rgb(255, 255, 255);">Welcome to the Digital Ninjas leaderboard! Here, you can see the top contributors who have earned the most points by supporting our community. Points are awarded for various actions, such as sharing our website, helping to code new features, suggesting ideas for improvement, and more.
         <br>
         <br>
         To earn points, you can start by sharing our website with your friends. Every new visitor who comes to our website through your invitation will earn you points.
@@ -139,6 +153,16 @@ p{
           
           tableBody.appendChild(row);
         });
+      
         </script>
+        <script type="text/javascript">
+          let progress = document.getElementById('progressbar');
+          let totalHeight = document.body.scrollHeight - window.innerHeight;
+          window.onscroll = function(){
+              let progressHeight = (window.pageYOffset / totalHeight) * 100;
+              progress.style.height = progressHeight + "%";
+          
+          }
+       </script>
   </body>
 </html>
