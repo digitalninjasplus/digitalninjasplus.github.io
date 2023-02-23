@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Ninjas - Leaderboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+}
+
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 24px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+td:nth-child(2) {
+  text-align: left;
+}
+
+td:nth-child(3) {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+p{
+    font-size:30px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+</style>
+  </head>
+  <body>
+    <h1>Leaderboard</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Table rows will be inserted here -->
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <h1>About the Leaderboard</h1>
+    <p style="color:rgb(0, 0, 0);">Welcome to the Digital Ninjas leaderboard! Here, you can see the top contributors who have earned the most points by supporting our community. Points are awarded for various actions, such as sharing our website, helping to code new features, suggesting ideas for improvement, and more.
+        <br>
+        <br>
+        To earn points, you can start by sharing our website with your friends. Every new visitor who comes to our website through your invitation will earn you points.
+        <br>  
+        <br>  
+        Another way to earn points is to get involved in our community. We are always looking for talented developers to help us code new features and improve our website. If you have programming skills and want to contribute to an exciting project, we'd love to have you on board.
+        <br>
+        <br>
+        In addition, we welcome ideas and suggestions for how to improve our website. Whether it's a new feature, a design tweak, or a bug fix, we value your input and want to hear from you. You can submit your ideas through discord, and if we use your suggestion, you'll earn points for your contribution.
+       <br>
+       </p>
+       <h1>
+       Point System
+       </h1>
+       <p style="text-align: left;">
+        <br>Sharing Digital Ninjas | <b>5 Points per person</b>
+        <br>Help Code Something | <b>100 Points</b>
+        <br>Suggest an Idea | <b>50 Points per used idea</b>
+        </p>
+
+    <script>// Sample data
+        const leaderboardData = [
+          { name: "Redgamer367", score: "INFINITE" },
+          { name: "Commandmaster567", score: 125 },
+          { name: "CinnamonToeCrunch", score: 65 },
+
+
+          
+        ];
+        
+        // Sort the data by score in descending order
+        leaderboardData.sort((a, b) => b.score - a.score);
+        
+        // Get the table body element
+        const tableBody = document.getElementById("table-body");
+        
+        // Loop through the data and create table rows
+        leaderboardData.forEach((entry, index) => {
+          const row = document.createElement("tr");
+          const rank = document.createElement("td");
+          const name = document.createElement("td");
+          const score = document.createElement("td");
+          
+          rank.textContent = index + 1;
+          name.textContent = entry.name;
+          score.textContent = entry.score;
+          
+          row.appendChild(rank);
+          row.appendChild(name);
+          row.appendChild(score);
+          
+          tableBody.appendChild(row);
+        });
+        </script>
+  </body>
+</html>
