@@ -12,8 +12,8 @@ body {
 
 header {
     font-family: 'Roboto Mono', monospace;
-background: rgb(136,0,255);
-background: radial-gradient(circle, rgba(136,0,255,1) 73%, rgba(0,48,255,1) 86%, rgba(0,0,0,1) 100%);
+    background: rgb(0,129,255);
+    background: radial-gradient(circle, rgba(0,129,255,1) 73%, rgba(0,48,255,1) 86%, rgba(0,0,0,1) 100%);
     color: #fff;
     padding: 2%;
     text-align: center;
@@ -236,6 +236,5 @@ header h1{
 {
     color:rgb(122, 122, 122);
 }
-
 
 
