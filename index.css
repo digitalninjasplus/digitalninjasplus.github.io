@@ -13,7 +13,7 @@ body {
 header {
     font-family: 'Roboto Mono', monospace;
 background-size: cover;
-background-image: url("/ico/Digital Ninjas.png");
+background:black url('/ico/Digital Ninjas.ico') no-repeat;
     background-repeat:no-repeat;
     color: #fff;
     padding: 2%;
