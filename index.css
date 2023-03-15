@@ -11,8 +11,8 @@ body {
 }
 
 header {
-    background: rgb(34,34,34);
-    background: radial-gradient(circle, rgb(22, 22, 22) 59%, rgba(0,0,0,1) 100%);
+background: rgb(9,9,121);
+background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(171,6,162,1) 54%, rgba(0,172,255,1) 100%);
     color: #fff;
     padding: 2%;
     text-align: center;
