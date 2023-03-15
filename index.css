@@ -12,8 +12,9 @@ body {
 
 header {
     font-family: 'Roboto Mono', monospace;
-background: rgb(255,0,0);
-background: radial-gradient(circle, rgba(255,0,0,1) 40%, rgba(255,106,0,1) 79%, rgba(0,0,0,1) 100%);
+background: black;
+background-image: url("/ico/Digital Ninjas.png");
+    background-repeat:no-repeat;
     color: #fff;
     padding: 2%;
     text-align: center;
