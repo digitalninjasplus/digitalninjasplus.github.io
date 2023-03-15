@@ -11,24 +11,15 @@ body {
 }
 
 header {
-    font-family: 'Roboto Mono', monospace;
-background-size: cover;
-background:black url('/ico/Digital ninjas.png') no-repeat;
-    background-size: contain;
-    background-repeat:no-repeat;
-    color: white;
+    background: rgb(34,34,34);
+    background: radial-gradient(circle, rgb(22, 22, 22) 59%, rgba(0,0,0,1) 100%);
+    color: #fff;
     padding: 2%;
     text-align: center;
     border-radius: 40px;
     font-size:20px;
 }
-h1
-{
-    font-family: 'Roboto Mono', monospace;
-}
-h2{
-    font-family: 'Roboto Mono', monospace;
-}
+
 header nav ul {
     display: flex;
     justify-content: center;
@@ -39,11 +30,13 @@ header nav ul li {
     margin: 0 10px;
 }
 
-
-header nav div a {
-    color: rgb(0, 0, 0);
+header nav ul li a {
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size:150%;
+}
+header nav div a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 header nav div {
     list-style: none;
@@ -206,12 +199,12 @@ img
     margin:0;
     padding:0;
     box-sizing: border-box;
-    display:flex;
+    font-family: Verdana;
+    display: flex;
     min-height: 20%;
 
     
 }
-
 
 section h2{
     font-size:25px;
@@ -219,9 +212,9 @@ section h2{
 }
 
 header h1{
-    color:rgb(0, 0, 0);
-    font-size:500%;
-    text-shadow: 2px 2px rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    font-size:70px;
+    text-shadow: 2px 1px rgb(207, 207, 207);
     margin-top:2%;
     filter: blur(1px);
 
@@ -238,5 +231,8 @@ header h1{
 {
     color:rgb(122, 122, 122);
 }
+
+
+
 
 
