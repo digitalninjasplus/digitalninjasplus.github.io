@@ -11,6 +11,7 @@ body {
 }
 
 header {
+    font-family: 'Roboto Mono', monospace;
 background: rgb(9,9,121);
 background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(171,6,162,1) 54%, rgba(0,172,255,1) 100%);
     color: #fff;
@@ -19,7 +20,13 @@ background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(171,6,162,1) 54%, rg
     border-radius: 40px;
     font-size:20px;
 }
-
+h1
+{
+    font-family: 'Roboto Mono', monospace;
+}
+h2{
+    font-family: 'Roboto Mono', monospace;
+}
 header nav ul {
     display: flex;
     justify-content: center;
@@ -30,13 +37,11 @@ header nav ul li {
     margin: 0 10px;
 }
 
-header nav ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
+
 header nav div a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    font-size:150%;
 }
 header nav div {
     list-style: none;
@@ -199,12 +204,12 @@ img
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: Verdana;
-    display: flex;
+    display:flex;
     min-height: 20%;
 
     
 }
+
 
 section h2{
     font-size:25px;
@@ -212,9 +217,9 @@ section h2{
 }
 
 header h1{
-    color:rgb(255, 255, 255);
-    font-size:70px;
-    text-shadow: 2px 1px rgb(207, 207, 207);
+    color:rgb(0, 0, 0);
+    font-size:500%;
+    text-shadow: 2px 2px rgb(0, 0, 0);
     margin-top:2%;
     filter: blur(1px);
 
@@ -231,8 +236,4 @@ header h1{
 {
     color:rgb(122, 122, 122);
 }
-
-
-
-
 
