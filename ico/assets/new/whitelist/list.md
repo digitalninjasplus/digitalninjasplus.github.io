@@ -8,3 +8,9 @@ Backup Proxys:
 www.tobi.gifts
 
 https://accelerated.mathcalculatoradvanced.xyz/
+
+https://sciencenow.info/
+
+https://teacherportal.xyz/
+
+https://nebulaproxy.io/
