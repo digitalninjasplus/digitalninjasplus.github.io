@@ -1,10 +1,10 @@
 # New Proxy
 You are now on the whitelist, access the proxy here:
 
-https://neb.searchtheweb.xyz/
+www.mathhog.xyz
 
 Backup Proxys:
 
-https://neb.quest/
+www.tobi.gifts
 
-https://replit.com/@ProxyHaven/aero
+https://accelerated.mathcalculatoradvanced.xyz/
