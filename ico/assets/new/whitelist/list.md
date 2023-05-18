@@ -1,23 +1,10 @@
 # New Proxy
 You are now on the whitelist, access the proxy here:
 
-https://coolsharks.info/
+https://neb.searchtheweb.xyz/
 
 Backup Proxys:
 
-https://cloudflare.rammerhead.org/
+https://neb.quest/
 
-https://www.coursera.cf/
-
-https://r.codewars.ml/
-
-https://r.pluralsight.gq/
-
-https://www.quizlet.gq/
-
-https://www.typeracer.gq/
-
-https://canvas.lnstructure.ga/
-
-https://gointerstellar.app/
-
+https://replit.com/@ProxyHaven/aero
