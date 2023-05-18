@@ -1,14 +1,12 @@
 # New Proxy
 You are now on the whitelist, access the proxy here:
 
-https://media.exid.me/uv/
+https://nebelung.massive.cat/
 
 Backup Proxys:
 
-https://mediaology.mediaology.com/uv/
+https://metallicdev.gq/
 
-https://foxmoss.com/uv/
+https://metallic.eu.org/
 
-https://fishme.me/uv/
-
-https://mathematicalsols.org/1.html
+https://metallic.cloudbarfbag.com/
