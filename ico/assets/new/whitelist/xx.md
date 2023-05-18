@@ -89,3 +89,15 @@ https://www.coursera.cf/
 https://cloudflare.rammerhead.org/
 
 https://r.studyschooltoday.eu.org/
+
+## METALLIC
+
+https://metallic.gq/
+
+https://metallicdev.gq/
+
+https://metallic.eu.org/
+
+https://nebelung.massive.cat/
+
+https://metallic.cloudbarfbag.com/
