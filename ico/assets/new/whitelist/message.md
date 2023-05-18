@@ -532,3 +532,5 @@ https://play.booket.tk/
 https://play.booket.gq/
 https://id.booket.ml/
 https://id.booket.tk/
+# ALT
+ALL EMERALD PROXIES (all are unblocked fr)             illusion.irepel.dev           emerald.irepel.org             em.bloovies.com                  www.notpiracy.org            emerald.phantomgames.dev             hi.phantomgames.dev                 em.hunters.design          em.worgey.com           emerald.goguardian.cloud               firewall-stock.shop         help.firewall-stock.shop       titaniumnetwork.gq        balls.gq        kajigs.gq            bruhs.gq
