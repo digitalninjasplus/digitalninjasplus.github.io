@@ -40,6 +40,7 @@ Please do not leak or share ANY of these proxies.
 - [v4.wiki](https://v4.wiki/)
 - [geographytips.org](https://geographytips.org/)
 - [gointerstellar.xyz](https://gointerstellar.xyz/)
+- https://gointerstellar.app/
 
 ## Ludicrous:
 
