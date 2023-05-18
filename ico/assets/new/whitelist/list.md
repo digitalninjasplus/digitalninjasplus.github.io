@@ -1,7 +1,7 @@
 # New Proxy
 You are now on the whitelist, access the proxy here:
 
-https://nebelung.massive.cat/
+https://metallic.gq/
 
 Backup Proxys:
 
