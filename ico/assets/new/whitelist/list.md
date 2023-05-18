@@ -14,3 +14,9 @@ https://sciencenow.info/
 https://teacherportal.xyz/
 
 https://nebulaproxy.io/
+
+https://20mathtime.com/
+
+https://interactive.kydana.art/
+
+https://youaresupercool.lol/
