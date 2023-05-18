@@ -2,7 +2,7 @@
 
 - This is is hosted on github pages
 - Acsess the unblocked site at https://digitalninjasplus.github.io/
-- Acsess the regular site at https://digitalninjas.world/
+
 # Sections
 - Tools
 - Games
