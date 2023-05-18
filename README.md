@@ -20,3 +20,4 @@
 - leaderboard.html
 - text.html
 - warning.html
+- proxy.md
