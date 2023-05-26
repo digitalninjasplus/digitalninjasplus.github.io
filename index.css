@@ -12,8 +12,9 @@ body {
 
 header {
     font-family: 'Roboto Mono', monospace;
-background: rgb(255,0,0);
-background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(57,113,255,1) 48%, rgba(207,0,255,1) 100%);
+background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
     color: #fff;
     padding: 2%;
     text-align: center;
