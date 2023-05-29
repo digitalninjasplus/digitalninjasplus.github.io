@@ -21,7 +21,6 @@
 - join.html
 - leaderboard.html
 - text.html
-- warning.html
 - proxy.md
 - Webrequest.html
 - about.html
