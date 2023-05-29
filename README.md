@@ -7,11 +7,13 @@
 - Tools
 - Games
 - Social
-- Hacking
+- Coding
 - School
 - Help
 - Contact
 - About
+- Background
+- Web Request
 # External Pages
 - 404.html
 - blocked.html
@@ -21,3 +23,5 @@
 - text.html
 - warning.html
 - proxy.md
+- Webrequest.html
+- about.html
