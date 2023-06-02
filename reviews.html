@@ -1,4 +1,6 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
 	<title>Product Reviews</title>
 	<style>
 		* {
@@ -101,11 +103,11 @@
 
 		<label for="rating">Rating:</label>
 		<div class="stars">
-			<span class="star" data-rating="5">★</span>
-			<span class="star" data-rating="4">★</span>
-			<span class="star" data-rating="3">★</span>
-			<span class="star" data-rating="2">★</span>
-			<span class="star" data-rating="1">★</span>
+			<span class="star" data-rating="5">&#9733;</span>
+			<span class="star" data-rating="4">&#9733;</span>
+			<span class="star" data-rating="3">&#9733;</span>
+			<span class="star" data-rating="2">&#9733;</span>
+			<span class="star" data-rating="1">&#9733;</span>
 			<input type="hidden" id="rating" name="rating">
 		</div>
 
@@ -125,6 +127,18 @@
 		// Get the review form element
 		const form = document.querySelector('form');
 
+		// Get the reviews element
+		const reviews = document.querySelector('#reviews');
+
+		// Load reviews from localStorage on page load
+		window.addEventListener('load', () => {
+			const storedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
+			storedReviews.forEach((review) => {
+				const reviewElement = createReviewElement(review);
+				reviews.appendChild(reviewElement);
+			});
+		});
+
 		// Add event listener to form submission
 		form.addEventListener('submit', (event) => {
 			event.preventDefault(); // Prevent page refresh
@@ -132,29 +146,24 @@
 			// Get form data
 			const name = form.elements.name.value;
 			const rating = form.elements.rating.value;
-			const review = form.elements.review.value;
+			const reviewText = form.elements.review.value;
 
-			// Check if user has already submitted a review today
-			const today = new Date().toLocaleDateString();
-			const lastReviewDate = localStorage.getItem('lastReviewDate');
-			if (lastReviewDate === today) {
-				alert('You have already submitted a review today.');
-				return;
-			}
+			// Create new review object
+			const review = {
+				name,
+				rating,
+				reviewText,
+				date: new Date().toLocaleDateString()
+			};
 
-			// Create review element
-			const reviewElement = document.createElement('div');
-			reviewElement.innerHTML = `
-				<h3>${name} - ${rating} Stars</h3>
-				<p>${review}</p>
-			`;
+			// Add review to localStorage
+			const storedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
+			storedReviews.push(review);
+			localStorage.setItem('reviews', JSON.stringify(storedReviews));
 
 			// Add review element to reviews display
-			const reviews = document.querySelector('#reviews');
+			const reviewElement = createReviewElement(review);
 			reviews.appendChild(reviewElement);
-
-			// Store date of review submission in local storage
-			localStorage.setItem('lastReviewDate', today);
 
 			// Reset form
 			form.reset();
@@ -197,7 +206,17 @@
 				});
 			});
 		});
+
+		// Helper function to create review element
+		function createReviewElement(review) {
+			const reviewElement = document.createElement('div');
+			reviewElement.innerHTML = `
+				<h3>${review.name} - ${review.rating} Stars</h3>
+				<p>${review.reviewText}</p>
+				<p class="date">${review.date}</p>
+			`;
+			return reviewElement;
+		}
 	</script>
-
-
-</body></html>
+</body>
+</html>
