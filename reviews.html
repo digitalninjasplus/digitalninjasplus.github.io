@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Product Reviews</title>
+	<title>Digital Ninjas Reviews</title>
 	<style>
 		* {
 			font-family: Verdana;
@@ -124,99 +124,119 @@
 
 	<!-- JavaScript to handle form submission and display reviews -->
 	<script>
-		// Get the review form element
-		const form = document.querySelector('form');
+	// Firebase configuration
+const firebaseConfig = {
+	apiKey: "YOUR_API_KEY",
+	authDomain: "YOUR_AUTH_DOMAIN",
+	databaseURL: "YOUR_DATABASE_URL",
+	projectId: "YOUR_PROJECT_ID",
+	storageBucket: "YOUR_STORAGE_BUCKET",
+	messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+	appId: "YOUR_APP_ID"
+};
 
-		// Get the reviews element
-		const reviews = document.querySelector('#reviews');
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-		// Load reviews from localStorage on page load
-		window.addEventListener('load', () => {
-			const storedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
-			storedReviews.forEach((review) => {
-				const reviewElement = createReviewElement(review);
-				reviews.appendChild(reviewElement);
-			});
-		});
+// Get a reference to the reviews in the Firebase database
+const reviewsRef = firebase.database().ref('reviews');
 
-		// Add event listener to form submission
-		form.addEventListener('submit', (event) => {
-			event.preventDefault(); // Prevent page refresh
+// Get the review form element
+const form = document.querySelector('form');
 
-			// Get form data
-			const name = form.elements.name.value;
-			const rating = form.elements.rating.value;
-			const reviewText = form.elements.review.value;
+// Get the reviews element
+const reviews = document.getElementById('reviews');
 
-			// Create new review object
-			const review = {
-				name,
-				rating,
-				reviewText,
-				date: new Date().toLocaleDateString()
-			};
+// Handle form submission
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
 
-			// Add review to localStorage
-			const storedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
-			storedReviews.push(review);
-			localStorage.setItem('reviews', JSON.stringify(storedReviews));
+	// Get the form data
+	const name = form.name.value.trim();
+	const rating = form.rating.value.trim();
+	const review = form.review.value.trim();
 
-			// Add review element to reviews display
-			const reviewElement = createReviewElement(review);
-			reviews.appendChild(reviewElement);
+	// Validate the form data
+	if (name === '' || rating === '' || review === '') {
+		alert('Please fill in all fields');
+		return;
+	}
 
-			// Reset form
-			form.reset();
-		});
+	// Create a new review object
+	const newReview = {
+		name: name,
+		rating: rating,
+		review: review,
+		timestamp: Date.now()
+	};
 
-		// Add event listeners to stars
-		const stars = document.querySelectorAll('.star');
-		stars.forEach((star) => {
-			star.addEventListener('click', () => {
-				const rating = star.getAttribute('data-rating');
-				document.querySelector('#rating').value = rating;
+	// Save the new review to Firebase
+	reviewsRef.push(newReview);
 
-				// Update the active stars
-				stars.forEach((s) => {
-					if (s.getAttribute('data-rating') <= rating) {
-						s.classList.add('active');
-					} else {
-						s.classList.remove('active');
-					}
-				});
-			});
+	// Clear the form
+	form.reset();
+});
 
-			star.addEventListener('mouseover', () => {
-				const rating = star.getAttribute('data-rating');
+// Display the reviews
+reviewsRef.on('value', (snapshot) => {
+	// Clear the current reviews
+	reviews.innerHTML = '';
 
-				// Update the stars on hover
-				stars.forEach((s) => {
-					if (s.getAttribute('data-rating') <= rating) {
-						s.classList.add('hover');
-					} else {
-						s.classList.remove('hover');
-					}
-				});
-			});
+	// Loop through the reviews in the snapshot
+	snapshot.forEach((childSnapshot) => {
+		// Get the review data
+		const review = childSnapshot.val();
 
-			star.addEventListener('mouseout', () => {
-				// Remove the hover styles on mouseout
-				stars.forEach((s) => {
-					s.classList.remove('hover');
-				});
-			});
-		});
+		// Create a new review element
+		const reviewElem = document.createElement('div');
+		reviewElem.classList.add('review');
 
-		// Helper function to create review element
-		function createReviewElement(review) {
-			const reviewElement = document.createElement('div');
-			reviewElement.innerHTML = `
-				<h3>${review.name} - ${review.rating} Stars</h3>
-				<p>${review.reviewText}</p>
-				<p class="date">${review.date}</p>
-			`;
-			return reviewElement;
+		const nameElem = document.createElement('h3');
+		nameElem.textContent = review.name;
+		reviewElem.appendChild(nameElem);
+
+		const ratingElem = document.createElement('div');
+		ratingElem.classList.add('rating');
+		for (let i = 1; i <= 5; i++) {
+			const starElem = document.createElement('span');
+			starElem.classList.add('star');
+			if (i <= review.rating) {
+				starElem.classList.add('active');
+			}
+			starElem.textContent = '★';
+			ratingElem.appendChild(starElem);
 		}
+		reviewElem.appendChild(ratingElem);
+
+		const reviewTextElem = document.createElement('p');
+		reviewTextElem.textContent = review.review;
+		reviewElem.appendChild(reviewTextElem);
+
+		const timestampElem = document.createElement('p');
+		const timestampDate = new Date(review.timestamp);
+		timestampElem.textContent = `Reviewed on ${timestampDate.toLocaleDateString()} at ${timestampDate.toLocaleTimeString()}`;
+		reviewElem.appendChild(timestampElem);
+
+		reviews.appendChild(reviewElem);
+	});
+});
+
+// Handle star rating clicks
+form.addEventListener('click', (e) => {
+	if (e.target.classList.contains('star')) {
+		const rating = e.target.getAttribute('data-rating');
+		form.rating.value = rating;
+		const stars = form.querySelectorAll('.star');
+		stars.forEach((star) => {
+			if (star.getAttribute('data-rating') <= rating) {
+				star.classList.add('active');
+			} else {
+				star.classList.remove('active');
+			}
+		});
+	}
+});
+
 	</script>
 </body>
 </html>
