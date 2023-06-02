@@ -1,0 +1,203 @@
+<html><head>
+	<title>Product Reviews</title>
+	<style>
+		* {
+			font-family: Verdana;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			background-color: #f7f7f7;
+			padding: 20px;
+		}
+		
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+		}
+		
+		form label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		form input[type="text"],
+		form select,
+		form textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+		
+		form input[type="submit"] {
+			background-color: #e49800;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		
+		#reviews {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+		
+		#reviews h3 {
+			margin-bottom: 10px;
+			font-size: 18px;
+		}
+		
+		#reviews p {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		/* Styles for the star rating */
+		.stars {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		.star {
+			font-size: 30px;
+			cursor: pointer;
+			color: #ccc;
+			transition: color 0.3s ease-in-out;
+		}
+
+		.star:hover,
+		.star.active {
+			color: #e49800;
+		}
+	</style>
+</head>
+<body>
+	<h1>Product Reviews</h1>
+
+	<!-- Review form -->
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name">
+
+		<label for="rating">Rating:</label>
+		<div class="stars">
+			<span class="star" data-rating="5">★</span>
+			<span class="star" data-rating="4">★</span>
+			<span class="star" data-rating="3">★</span>
+			<span class="star" data-rating="2">★</span>
+			<span class="star" data-rating="1">★</span>
+			<input type="hidden" id="rating" name="rating">
+		</div>
+
+		<label for="review">Review:</label>
+		<textarea id="review" name="review"></textarea>
+
+		<input type="submit" value="Submit">
+	</form>
+
+	<!-- Reviews display -->
+	<div id="reviews">
+		<!-- Reviews will be displayed here -->
+	</div>
+
+	<!-- JavaScript to handle form submission and display reviews -->
+	<script>
+		// Get the review form element
+		const form = document.querySelector('form');
+
+		// Add event listener to form submission
+		form.addEventListener('submit', (event) => {
+			event.preventDefault(); // Prevent page refresh
+
+			// Get form data
+			const name = form.elements.name.value;
+			const rating = form.elements.rating.value;
+			const review = form.elements.review.value;
+
+			// Check if user has already submitted a review today
+			const today = new Date().toLocaleDateString();
+			const lastReviewDate = localStorage.getItem('lastReviewDate');
+			if (lastReviewDate === today) {
+				alert('You have already submitted a review today.');
+				return;
+			}
+
+			// Create review element
+			const reviewElement = document.createElement('div');
+			reviewElement.innerHTML = `
+				<h3>${name} - ${rating} Stars</h3>
+				<p>${review}</p>
+			`;
+
+			// Add review element to reviews display
+			const reviews = document.querySelector('#reviews');
+			reviews.appendChild(reviewElement);
+
+			// Store date of review submission in local storage
+			localStorage.setItem('lastReviewDate', today);
+
+			// Reset form
+			form.reset();
+		});
+
+		// Add event listeners to stars
+		const stars = document.querySelectorAll('.star');
+		stars.forEach((star) => {
+			star.addEventListener('click', () => {
+				const rating = star.getAttribute('data-rating');
+				document.querySelector('#rating').value = rating;
+
+				// Update the active stars
+				stars.forEach((s) => {
+					if (s.getAttribute('data-rating') <= rating) {
+						s.classList.add('active');
+					} else {
+						s.classList.remove('active');
+					}
+				});
+			});
+
+			star.addEventListener('mouseover', () => {
+				const rating = star.getAttribute('data-rating');
+
+				// Update the stars on hover
+				stars.forEach((s) => {
+					if (s.getAttribute('data-rating') <= rating) {
+						s.classList.add('hover');
+					} else {
+						s.classList.remove('hover');
+					}
+				});
+			});
+
+			star.addEventListener('mouseout', () => {
+				// Remove the hover styles on mouseout
+				stars.forEach((s) => {
+					s.classList.remove('hover');
+				});
+			});
+		});
+	</script>
+
+
+</body></html>
