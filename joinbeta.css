@@ -197,12 +197,12 @@
   animation: move 5s infinite linear;
   
   }
-  .bg-border {
-    animation: bg 5s infinite linear, glow 1.5s infinite alternate;
+  .bg {
+    animation: bluegreen 5s infinite linear, glow 1.5s infinite alternate;
     position: relative;
     }
     
-    .bg-border::before {
+    .bg::before {
     content: "";
     position: absolute;
     top: -5px;
@@ -224,7 +224,7 @@
   85%  { border: 5px solid violet; }
   100% { border: 5px solid red; }
   }
-  @keyframes bg {
+  @keyframes bluegreen {
     0%   { border: 5px solid rgb(0, 140, 255); }
     14%  { border: 5px solid rgb(0, 255, 247); }
     28%  { border: 5px solid rgb(0, 255, 106); }
