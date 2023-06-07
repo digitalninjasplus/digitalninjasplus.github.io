@@ -73,10 +73,10 @@
   
   .d:hover{background-color: green;}
   .e {
-    background-image: url('/ico/jon.png');
+    background-image: url('/ico/jonx.png');
     background-color: rgb(0, 140, 255);
   }
-  .e:hover{background-color: rgb(0, 83, 179);}
+
   
   .f {
     background-image: url('/ico/jon.png');
