@@ -60,6 +60,7 @@
   
   .b {
     background-image: url('/ico/toe.png');
+    cursor:grab;
   }
   
   .c {
