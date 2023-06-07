@@ -56,6 +56,7 @@
     background-image: url('/ico/red.png');
     background-position-y: 30px;
     background-color:#1c1b20;
+    cursor:grab;
   }
   
   .b {
