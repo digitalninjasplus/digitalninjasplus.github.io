@@ -13,6 +13,4 @@ Please do not leak or share ANY of these proxies.
 
 
 - [https://emerald.irepel.org](https://emerald.irepel.org) -Unblocked
-- [firewall-stock.shop](https://firewall-stock.shop) -Unblocked
-- [titaniumnetwork.gq](https://titaniumnetwork.gq) -Unblocked
 - [learningprep.xyz](https://learningprep.xyz/) -Unblocked
