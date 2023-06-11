@@ -12,5 +12,4 @@ Please do not leak or share ANY of these proxies.
 ## Backup Proxies
 
 
-- [https://emerald.irepel.org](https://emerald.irepel.org) -Unblocked
 - [learningprep.xyz](https://learningprep.xyz/) -Unblocked
