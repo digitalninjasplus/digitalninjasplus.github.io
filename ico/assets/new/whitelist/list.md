@@ -13,3 +13,6 @@ Please do not leak or share ANY of these proxies.
 
 
 - [learningprep.xyz](https://learningprep.xyz/) -Unblocked
+- (https://www.nebulacdn.xyz/)
+- https://neb.osanaweb.xyz/
+- https://nebulaproxy.io/
