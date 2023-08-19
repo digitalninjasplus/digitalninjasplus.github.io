@@ -12,9 +12,8 @@ body {
 
 header {
     font-family: 'Roboto Mono', monospace;
-background: #F7971E;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(135,0,0);
+    background: linear-gradient(90deg, rgba(135,0,0,1) 0%, rgba(255,0,0,1) 27%, rgba(222,0,255,1) 69%, rgba(115,0,133,1) 100%);
 
 
     color: #fff;
@@ -22,6 +21,7 @@ background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, F
     text-align: center;
     border-radius: 40px;
     font-size:20px;
+    border:7px solid black;
 }
 h1
 {
@@ -71,8 +71,11 @@ section {
     margin: 1%;
     width: 97%;
     text-align: center;
-    border-style: solid;
+    border:4px solid black;
     border-radius: 50px;
+    margin-left:10px;
+
+
 
 }
 
@@ -240,3 +243,7 @@ header h1{
     color:rgb(122, 122, 122);
 }
 
+.banner{color: black;font-size: 20px;margin-top: 10px;margin-bottom: 10px;text-align: center;}
+.banner-a{background: #ed1414;padding: 15px;border-radius: 31px; border:7px solid black;}
+
+strong{font-family: 'Courier New', Courier, monospace;}
