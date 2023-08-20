@@ -247,3 +247,10 @@ header h1{
 .banner-a{background: #ed1414;padding: 15px;border-radius: 31px; border:7px solid black;}
 
 strong{font-family: 'Courier New', Courier, monospace;}
+
+.wwx{font-family: 'Roboto Mono', monospace;; font-weight: 200;font-size:175%;color:rgb(0, 0, 0);}
+
+.textw{font-size: 25px;}
+.textx{font-size: 40px;}
+.firstline{padding-top:25px;}
+.linkw{color:gray;}
