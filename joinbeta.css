@@ -66,6 +66,7 @@
   
   .c {
     background-image: url('/ico/fra1.png');
+      cursor:grab;
   }
   
   .d {
