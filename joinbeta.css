@@ -56,17 +56,17 @@
     background-image: url('/ico/red.png');
     background-position-y: 30px;
     background-color:#1c1b20;
-    cursor:grab;
+    cursor:pointer;
   }
   
   .b {
     background-image: url('/ico/toe.png');
-    cursor:grab;
+    cursor:pointer;
   }
   
   .c {
     background-image: url('/ico/fra1.png');
-      cursor:grab;
+      cursor:pointer;
   }
   
   .d {
