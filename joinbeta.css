@@ -117,6 +117,9 @@
   .n {
     background-image: url('/ico/cri.png');
   }
+.avi {
+    background-image: url('/ico/avi.png');
+  }
   
   
   @media (max-width: 12000px) {
