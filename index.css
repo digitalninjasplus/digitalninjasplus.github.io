@@ -12,8 +12,8 @@ body {
 
 header {
     font-family: 'Roboto Mono', monospace;
-    background: rgb(46,135,0);
-background: linear-gradient(90deg, rgba(46,135,0,1) 0%, rgba(0,255,141,1) 27%, rgba(108,255,0,1) 69%, rgba(9,133,0,1) 100%);
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
 
     color: #fff;
