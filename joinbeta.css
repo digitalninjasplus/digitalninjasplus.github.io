@@ -120,6 +120,9 @@
 .avi {
     background-image: url('/ico/avi.png');
   }
+.ced {
+    background-image: url('/ico/ced.png');
+  }
   
   
   @media (max-width: 12000px) {
