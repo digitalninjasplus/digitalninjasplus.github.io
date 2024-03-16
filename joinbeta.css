@@ -60,13 +60,17 @@
   
   .b {
     background-image: url('/ico/toe.png');
+    background-color: black;
 
   }
+.b:hover{background-color:gray;}
   
   .c {
     background-image: url('/ico/fra1.png');
+    background-color:black;
 
   }
+.c:hover{background-color:gray;}
   
   .d {
     background-image: url('/ico/max1.png');
