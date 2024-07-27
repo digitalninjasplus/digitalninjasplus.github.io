@@ -53,82 +53,12 @@
   }
   
   .a {
-    background-image: url('/ico/red.png');
+    background-image: url('/ico/pfp2.png');
     background-color:#1c1b20;
     cursor:pointer;
   }
   
-  .b {
-    background-image: url('/ico/toe.png');
-    background-color:black;
-
-  }
-.b:hover{background-color:gray;}
   
-  .c {
-    background-image: url('/ico/fra1.png');
-    background-color:black;
-
-  }
-.c:hover{background-color:gray;}
-  
-  .d {
-    background-image: url('/ico/max1.png');
-    background-color: #59b111;
-  }
-  
-  .d:hover{background-color: green;}
-  .e {
-    background-image: url('/ico/jon.png');
-    background-color: rgb(0, 140, 255);
-  }
-
-  
-  .f {
-    background-image: url('/ico/jonx.png');
-    background-color: rgb(255, 174, 0);
-  }
-  
-  .f:hover{background-color: rgb(212, 113, 0);}
-  .g {
-    background-image: url('/ico/oli.png');
-  }
-  .h {
-    background-image: url('/ico/daniel2.png');
-  }
-  .i {
-    background-image: url('/ico/vin1.png');
-    background-position-y: 20px;
-    background-color: rgb(165, 97, 42);
-  }
-  .i:hover{background-color: rgb(206, 202, 0);}
-  .j {
-    background-image: url('/ico/geo.png');
-  }
-  .k {
-    background-image: url('/ico/ril1.png');
-    background-position-y: 40px;
-    background-color:black;
-  }
-
-  .l {
-    background-image: url('/ico/col.png');
-  }
-  .m {
-    background-image: url('/ico/dev.png');
-  }
-  .n {
-    background-image: url('/ico/cri.png');
-  }
-.avi {
-    background-image: url('/ico/avi.png');
-  }
-.ced {
-    background-image: url('/ico/ced.png');
-  }
-.oli2 {
-    background-image: url('/ico/oli2.png');
-  }
   
   
   @media (max-width: 12000px) {
