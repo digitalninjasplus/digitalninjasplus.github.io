@@ -12,9 +12,8 @@ body {
 
 header {
     font-family: 'Roboto Mono', monospace;
-background: rgb(170,0,0);
-background: linear-gradient(90deg, rgba(170,0,0,1) 0%, rgba(255,0,0,1) 49%, rgba(107,22,22,1) 100%);
-
+ background: rgb(158,158,158);
+background: linear-gradient(90deg, rgba(158,158,158,1) 0%, rgba(180,180,180,1) 35%, rgba(164,164,164,1) 100%); 
 
 
     color: #fff;
@@ -245,7 +244,7 @@ header h1{
 }
 
 .banner{color: black;font-size: 20px;margin-top: 10px;margin-bottom: 10px;text-align: center;}
-.banner-a{background: #e01919;padding: 15px;border-radius: 31px; border:7px solid black;}
+.banner-a{background: #ababab; padding: 15px;border-radius: 31px; border:7px solid black;}
 
 strong{font-family: 'Courier New', Courier, monospace;}
 
